@@ -21,7 +21,7 @@ export const App = () => {
   
   return (
     <div className={css.phonebook}>
-      {isLoading && <Loader />}
+      {isLoading && !error && <Loader />}
       <h1>Phonebook</h1>
       {error && <ErrorMessage />}
       <ContactForm />

@@ -41,7 +41,8 @@ const contactsSlice = createSlice({
                     contact => contact.id === action.payload
                 );
                 state.items.splice(index, 1);
-            });
+            })
+            .addCase(deleteContact.rejected, handleRejected);
     },
 });
 
